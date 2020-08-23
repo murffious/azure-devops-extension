@@ -1,0 +1,38 @@
+{
+  "manifestVersion": 1,
+  "id": "bug-smasher-kards-dev",
+  "publisher": "MorfEngineering",
+  "version": "1.0.0",
+  "name": "bug-smasher",
+  "description": "A tool to help debug for new to intermediate devs or beyond",
+  "public": false,
+  "categories": ["Azure Repos"],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "my-hub",
+      "type": "ms.vss-web.hub",
+      "targets": ["ms.vss-code-web.code-hub-group"],
+      "properties": {
+        "name": "My Hub",
+        "uri": "my-hub.html",
+        "baseUri": "https://localhost:44300"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "my-hub.html",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ]
+}
